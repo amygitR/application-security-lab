@@ -18,10 +18,10 @@ server.post('/createUser', async (req, res) => {
         res.cookie('webAppCookie', `${req.body.username}`);
         
         // redirect to dashboard
-        res.redirect('/pages/dashboard.html');
+        res.redirect('/dashboard.html');
 
     } else { // user was not created
-        res.redirect('/pages/createUser.html?error=userExists'); // redirect to creatUser page
+        res.redirect('/createUser.html?error=userExists'); // redirect to creatUser page
     }
 })
 

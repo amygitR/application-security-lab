@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <script>
+        // Check if the user has a valid session cookie, if not, redirect them to the login page
+        if (!document.cookie.includes('webAppCookie')) {
+            window.location.href = '/';  // Redirect to login page if no cookie
+        }
+    </script>
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Application Security Lab</title>
     <link rel="stylesheet" href="/styles/matrix.css">
 </head>
